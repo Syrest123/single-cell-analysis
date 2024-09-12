@@ -1,4 +1,4 @@
-# single-cell-analysis
+# single-cell-analysis pipeline
 Developed by Semawule Syrus 
 
 Downloaded the whole dataset from SRA (PRJNA746586)
