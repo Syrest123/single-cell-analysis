@@ -38,6 +38,8 @@ suppressPackageStartupMessages({
   library(ggraph)
 })
 ```
+<img width="1378" height="1052" alt="upload_4a6f17fee00615ca895bc68b86301ba6" src="https://github.com/user-attachments/assets/428dad10-f253-43f3-a9c2-fb39b11b09e1" />
+
 ## Reading in the .rds object
 Object can be downloaded from the *data* directory
 ```{r}
