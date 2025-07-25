@@ -166,7 +166,7 @@ bcells_only_filtered@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-![Screenshot 2025-07-25 at 11.29.56 AM](https://hackmd.io/_uploads/BJm9lTgDex.png)
+![Screenshot 2025-07-25 at 11.29.56 AM](Figure/upload_28538a4b9fa598cd50be244f8e36813d.png)
 ## Prepare Clonotype-Hashtag Data
 ```{r}
  # Extract metadata with proper barcode handling
