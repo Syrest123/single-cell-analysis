@@ -168,8 +168,7 @@ bcells_only_filtered@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-<img alt="Screenshot 2025-07-25 at 11.29.56 AM" src="Figure/upload_28538a4b9fa598cd50be244f8e36813d.png" />
-<img width="659" height="407" alt="upload_8a58d5cfedbe09ae3b519096fe48a7a7" src="https://github.com/user-attachments/assets/512df2d2-67f0-4154-9dda-a1295ac484c7" />
+<img width="1172" height="652" alt="upload_28538a4b9fa598cd50be244f8e36813d" src="https://github.com/user-attachments/assets/34572c91-7066-4d57-81cc-f222a02ee77d" />
 
 ## Prepare Clonotype-Hashtag Data
 ```{r}
@@ -179,7 +178,7 @@ head(meta_bcells)
 # Verify barcode matching
 head(meta_bcells %>% select(Run, hash.ID, raw_clonotype_id))
 ```
-![Screenshot 2025-07-25 at 11.33.33 AM](https://hackmd.io/_uploads/H1iDbTgvlg.png)
+<img width="554" height="198" alt="upload_cf2b3da30f0d5880a23a77e52712b55a" src="https://github.com/user-attachments/assets/a216eeb2-88cf-47fb-a05c-6e2b4efb2d14" />
 
 ```{r}
 # Check for proper barcode-clonotype matching
@@ -192,7 +191,7 @@ meta_bcells %>%
   mutate(clonotype_coverage = cells_with_clonotypes/total_cells)
 
 ```
-![Screenshot 2025-07-25 at 11.34.26 AM](https://hackmd.io/_uploads/SJksbaxDxl.png)
+<img width="637" height="196" alt="upload_7f3b903a0d1dc3e89a522faf36ad3465" src="https://github.com/user-attachments/assets/004e3313-376d-475e-8f36-101134c839a0" />
 
 ```{r}
 # Clonotype Visualization by Hashtag 
@@ -205,7 +204,7 @@ top_clonos <- meta_bcells %>%
 
 head(top_clonos)
 ```
-![Screenshot 2025-07-25 at 11.36.04 AM](https://hackmd.io/_uploads/BkWZGalvxe.png)
+<img width="474" height="246" alt="upload_614a0ef9ce8b76c1a490d28e967df7be" src="https://github.com/user-attachments/assets/313439d2-163c-45cd-aa33-a4892fb852ae" />
 
 ## Number of clonotypes in each patient
 ```{r}
@@ -218,10 +217,9 @@ upset_data <- meta_bcells %>%
 
 UpSetR::upset(upset_data, nsets = 10, order.by = "freq")
 ```
-![Screenshot 2025-07-25 at 11.41.53 AM](https://hackmd.io/_uploads/SJkDXpxwgx.png)
+<img width="665" height="410" alt="upload_73b6812f409cd7403d4b8457e89e03aa" src="https://github.com/user-attachments/assets/10fac397-8026-4ef9-98cd-a97cdfe8e73a" />
 
 ## Clonotype sizes
-
 ```{r}
 # Step 1: Count cells per clonotype per sample
 clone_sizes <- meta_bcells %>%
@@ -269,7 +267,7 @@ ggplot(clone_distribution,
     legend.title = element_text(size = 12)
     )
 ```
-![Screenshot 2025-07-25 at 12.36.34 PM](https://hackmd.io/_uploads/H1xNg0lvgx.png)
+<img width="661" height="413" alt="upload_bbd21bb786d7cfe9418f7adcbfb8e309" src="https://github.com/user-attachments/assets/5290d4e7-66be-4eda-9145-fc6bb0987c9c" />
 
 ## V-J gene Pairing
 The chord diagram visualizes the most frequent V-J gene pairings in the 
@@ -355,8 +353,7 @@ circos.clear()
 # Close PDF device
 dev.off()
 ```
-![Screenshot 2025-07-25 at 11.48.42 AM](https://hackmd.io/_uploads/SJ9gB6gwxe.png)
-
+<img width="1378" height="1052" alt="upload_4a6f17fee00615ca895bc68b86301ba6" src="https://github.com/user-attachments/assets/84c7b0a1-c81b-4618-b36a-efc1d35b0e95" />
 
 The chord diagram titled **"V–J Gene Pairing (Top 10%)"** visualizes the 
 most frequent pairings between variable (V) and joining (J) genes in the 
@@ -387,12 +384,10 @@ ggplot(recomb_data, aes(x = reorder(vdj_combo, n), y = n)) +
        x = "V-D-J Combination", y = "Count") +
   theme_minimal()
 ```
-![Screenshot 2025-07-25 at 12.26.59 PM](https://hackmd.io/_uploads/BygeATgvlx.png)
-
+<img width="671" height="409" alt="upload_4166d19b7679ebf631d501f0a8d89963" src="https://github.com/user-attachments/assets/4df1dfa4-491d-489c-8cdb-d5068009b51a" />
 
 
 ## CDR3 Length Distribution
-
 ```{r}
 # Calculate CDR3 lengths (assuming cdr3_aa column exists)
 meta_bcells <- meta_bcells %>%
@@ -405,7 +400,8 @@ ggplot(meta_bcells, aes(x = cdr3_length, fill = SingleR.labels)) +
   theme_classic2() +
   scale_fill_brewer(palette = "Set2", name = "Sample")
 ```
-![Screenshot 2025-07-25 at 12.23.07 PM](https://hackmd.io/_uploads/BJi-paxvex.png)
+<img width="665" height="413" alt="upload_7cd5408950e98eafec76a77c4c919635" src="https://github.com/user-attachments/assets/756b9cf9-8695-4ad7-bf38-84abc7053dd2" />
+
 ```{r}
 ggplot(meta_bcells, aes(x = cdr3_length, fill = SingleR.labels)) +
   geom_histogram(binwidth = 1, alpha = 0.5, position = "identity") +
@@ -413,8 +409,7 @@ ggplot(meta_bcells, aes(x = cdr3_length, fill = SingleR.labels)) +
   labs(title = "CDR3 Length Histogram (Absolute Counts)") +
   theme_classic2()
 ```
-![Screenshot 2025-07-25 at 12.24.17 PM](https://hackmd.io/_uploads/SkCSaTxwge.png)
-
+<img width="666" height="410" alt="upload_4111a1550dc77f592c312943662bbafb" src="https://github.com/user-attachments/assets/65cb4c34-ef66-49ca-a1e0-753a696e53a8" />
 
 ```{r}
 library(tidyverse)
@@ -430,7 +425,7 @@ contig_counts <- meta_dt %>%
 # Print the result
 contig_counts
 ```
-![Screenshot 2025-07-25 at 12.54.54 PM](https://hackmd.io/_uploads/B15OVRgwgl.png)
+<img width="591" height="202" alt="upload_e4ecba96beb1fc30d906d9eec61e916b" src="https://github.com/user-attachments/assets/45bb753c-a648-4458-938e-000d21242a14" />
 
 ```{r}
 # Calculate CDR3 lengths
@@ -446,7 +441,7 @@ ggplot(vdj_long, aes(x = cdr3_length, fill = hash.ID)) +
   theme_minimal() +
   scale_fill_brewer(palette = "Set2", name = "Sample")
 ```
-![Screenshot 2025-07-25 at 12.56.17 PM](https://hackmd.io/_uploads/H1y0E0ewlg.png)
+<img width="664" height="410" alt="upload_3c055247315e4ac5210414a5a15a4a9a" src="https://github.com/user-attachments/assets/f9c21902-36b9-4bce-b504-f386e28411e7" />
 
 ```{r}
 # Calculating the patients
@@ -482,8 +477,7 @@ ggplot(vdj_long, aes(x = cdr3_length, fill = hash.ID)) +
     legend.title = element_text(size = 14)
   )
 ```
-![Screenshot 2025-07-25 at 12.58.03 PM](https://hackmd.io/_uploads/H1_ESCxDxl.png)
-
+<img width="667" height="410" alt="upload_882530ff7ecf7384f36715b35d5fa10e" src="https://github.com/user-attachments/assets/b22e17c2-8064-4633-b1a0-3901076a8f6a" />
 
 ```{r}
 library(ggseqlogo)
@@ -517,7 +511,7 @@ ggsave("~/singlecell/Figure5c_Facet_motif_new.png",
        height = 10, 
        dpi = 800)
 ```
-![Screenshot 2025-07-25 at 1.04.22 PM](https://hackmd.io/_uploads/rk7nLCePlx.png)
+<img width="665" height="399" alt="upload_4810f3f010de58bf59263f18cffd5a43" src="https://github.com/user-attachments/assets/b9e8be99-25f8-4882-9c65-918702389a73" />
 
 ```{r}
 # Calculate V gene usage frequencies
@@ -560,7 +554,7 @@ ggplot(v_usage, aes(x = hash.ID, y = v_gene, fill = freq)) +
     
   ) 
 ```
-![Screenshot 2025-07-25 at 1.06.56 PM](https://hackmd.io/_uploads/rJ18vAxwle.png)
+<img width="692" height="1044" alt="upload_daf92bf441fc60c8293315c32112906f" src="https://github.com/user-attachments/assets/2efd2066-87dd-4960-9baa-be0e31ef5396" />
 
 ```{r}
 # Calculate J gene usage frequencies
@@ -603,7 +597,7 @@ p2 <- ggplot(j_usage, aes(x = hash.ID, y = j_gene, fill = freq)) +
     
   ) 
 ```
-![Screenshot 2025-07-25 at 1.07.36 PM](https://hackmd.io/_uploads/HkIuvRxPll.png)
+<img width="601" height="384" alt="upload_f2e43c24ea83c0a1bb26bf493c0803fc" src="https://github.com/user-attachments/assets/298fec5b-a5b6-4324-baa2-bed5b73934d7" />
 
 ```{r}
 # V & J
@@ -650,7 +644,7 @@ ggplot(v_j_usage, aes(x = j_gene, y = v_gene, fill = freq)) +
 write_csv(unique_data, "~/singlecell/unique_final_dataset.csv")
 
 ```
-![Screenshot 2025-07-25 at 1.13.09 PM](https://hackmd.io/_uploads/rkEaORlDex.png)
+<img width="582" height="675" alt="upload_7d21042746db4557dff7e41e3789313e" src="https://github.com/user-attachments/assets/8634d3e1-596f-44e8-b8d3-18aa18b72f31" />
 
 ```{r}
 library(ggalluvial)
@@ -716,8 +710,7 @@ ggplot(plot_data,
     legend.title = element_text(size = 12)
 ) 
 ```
-![Screenshot 2025-07-25 at 1.33.02 PM](https://hackmd.io/_uploads/S1P-RRxvxx.png)
-
+<img width="976" height="626" alt="upload_e4cdafff3b8cc1dac934133a87921758" src="https://github.com/user-attachments/assets/dbafc9fa-3c1c-4180-a54a-df4540d477de" />
 
 
 
