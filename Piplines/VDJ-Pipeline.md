@@ -87,7 +87,7 @@ bcells_only@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-![Screenshot 2025-07-25 at 11.17.54 AM](https://hackmd.io/_uploads/B1e6p3xPgx.png)
+<img width="663" height="411" alt="upload_c31b5e9a1d3f4537e56a64fad95aadb6" src="https://github.com/user-attachments/assets/2016b112-ffbd-4c9b-ba2c-259a53c3ecaf" />
 
 ```{r}
 # Plot cell types vs. clonotype presence
@@ -101,7 +101,7 @@ bcells_only@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-![Screenshot 2025-07-25 at 11.22.57 AM](https://hackmd.io/_uploads/HyCk1TgDee.png)
+<img width="668" height="408" alt="upload_4de2e4b52c17797064130544bd90c19a" src="https://github.com/user-attachments/assets/43547e0a-b7f7-465f-b831-56571c9ff89b" />
 
 ```{r}
 # Plot cell types vs. clonotype presence
@@ -113,7 +113,7 @@ bcells_only@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-![Screenshot 2025-07-25 at 11.26.02 AM](https://hackmd.io/_uploads/SkdokTeDee.png)
+<img width="659" height="407" alt="upload_8a58d5cfedbe09ae3b519096fe48a7a7" src="https://github.com/user-attachments/assets/512df2d2-67f0-4154-9dda-a1295ac484c7" />
 
 ## Filtering poor quality cells
 ```{r}
@@ -168,7 +168,9 @@ bcells_only_filtered@meta.data %>%
 # Save the visual 
 ggsave("<<path to visual>>")
 ```
-![Screenshot 2025-07-25 at 11.29.56 AM](Figure/upload_28538a4b9fa598cd50be244f8e36813d.png)
+<img alt="Screenshot 2025-07-25 at 11.29.56 AM" src="Figure/upload_28538a4b9fa598cd50be244f8e36813d.png" />
+<img width="659" height="407" alt="upload_8a58d5cfedbe09ae3b519096fe48a7a7" src="https://github.com/user-attachments/assets/512df2d2-67f0-4154-9dda-a1295ac484c7" />
+
 ## Prepare Clonotype-Hashtag Data
 ```{r}
  # Extract metadata with proper barcode handling
