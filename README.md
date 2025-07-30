@@ -5,7 +5,7 @@ This repository contains the pipelines used during the analysis and an example d
 
 Used 10X genomics server to generate the count matrix. 
 
-Samples can be downloaded from Bioproject (PRJNA1297365) and the validation dataset from BioProject (PRJNA746586)
+Samples can be downloaded from Bioproject [PRJNA1297365](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1297365/) and the validation dataset from BioProject [PRJNA746586](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA746586/)
 
 Used Seurat and Bioconductor VDJ packages in R for downstream analysis
 
