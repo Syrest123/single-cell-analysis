@@ -1,9 +1,9 @@
 # single-cell-analysis pipeline
 Developed by Semawule Syrus 
 
-Downloaded the whole dataset from SRA (PRJNA746586)
+Downloaded the validation dataset from BioProject (PRJNA746586)
 
-Used STARsolo for classical alignment and alevin for pseudo alignment
+Used 10X genomics server to generate the count matrix 
 
-Used Seurat in R for downstream analysis
+Used Seurat and Bioconductor VDJ packages in R for downstream analysis
 
