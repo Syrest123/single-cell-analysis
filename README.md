@@ -9,3 +9,4 @@ Samples can be downloaded from Bioproject [PRJNA1297365](https://www.ncbi.nlm.ni
 
 Used Seurat and Bioconductor VDJ packages in R for downstream analysis
 
+You can cite all versions by using the DOI [10.5281/zenodo.16669000](https://zenodo.org/records/16669001)
